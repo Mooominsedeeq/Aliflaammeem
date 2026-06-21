@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Alif Lam Meem Official – A spiritual organization based in Shamsabad, Budgam, offering faith healing, Quranic education, and spiritual guidance rooted in centuries of tradition." />
+  <meta name="keywords" content="Alif Lam Meem, spiritual organization, Shamsabad, Budgam, Kashmir, faith healing, Islamic seminary, Sufi" />
+  <meta name="author" content="Moomin Sedeeq" />
+  <meta property="og:title" content="Alif Lam Meem Official" />
+  <meta property="og:description" content="Spiritual guidance rooted in tradition — based in Shamsabad, Budgam, Kashmir." />
+  <meta property="og:type" content="website" />
+  <title>Alif Lam Meem Official</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            emerald: {
+              50:  '#ecfdf5',
+              100: '#d1fae5',
+              200: '#a7f3d0',
+              300: '#6ee7b7',
+              400: '#34d399',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+              800: '#065f46',
+              900: '#064e3b',
+              950: '#022c22',
+            },
+          },
+          fontFamily: {
+            inter: ['Inter', 'sans-serif'],
+            urdu:  ['Noto Nastaliq Urdu', 'serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-slate-50 font-inter text-slate-800 antialiased">
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-18">
+
+        <!-- Logo -->
+        <a href="#home" class="nav-link flex items-center gap-3 group" data-section="home">
+          <div class="logo-emblem w-10 h-10 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-200">
+            <span class="text-white font-bold text-sm leading-none">الم</span>
+          </div>
+          <div class="hidden sm:block">
+            <span class="text-emerald-900 font-bold text-base leading-tight block">ALIF LAM MEEM</span>
+            <span class="text-emerald-600 text-xs font-medium tracking-widest uppercase">Official</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center gap-1">
+          <a href="#home"    class="nav-link nav-item px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200" data-section="home">Home</a>
+          <a href="#history" class="nav-link nav-item px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200" data-section="history">History</a>
+          <a href="#mission" class="nav-link nav-item px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200" data-section="mission">Mission</a>
+          <a href="#app"
+             class="nav-link ml-3 px-5 py-2.5 rounded-xl text-sm font-semibold bg-emerald-700 text-white hover:bg-emerald-600 shadow-md hover:shadow-emerald-200 transition-all duration-200 flex items-center gap-2"
+             data-section="app">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.523 0H6.477L0 12l6.477 12h11.046L24 12z"/></svg>
+            Get App
+          </a>
+        </div>
+
+        <!-- Hamburger -->
+        <button id="hamburger" aria-label="Open menu" class="md:hidden p-2 rounded-lg text-emerald-800 hover:bg-emerald-50 transition-colors duration-200">
+          <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+          <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden mobile-menu-panel border-t border-emerald-100">
+      <div class="px-4 py-3 space-y-1">
+        <a href="#home"    class="nav-link mobile-nav-item flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium" data-section="home">
+          <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Home
+        </a>
+        <a href="#history" class="nav-link mobile-nav-item flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium" data-section="history">
+          <span class="w-2 h-2 rounded-full bg-emerald-500"></span> History
+        </a>
+        <a href="#mission" class="nav-link mobile-nav-item flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium" data-section="mission">
+          <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Mission
+        </a>
+        <a href="#app"     class="nav-link mobile-nav-item flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold text-emerald-700" data-section="app">
+          <span class="w-2 h-2 rounded-full bg-emerald-700"></span> Get App
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== MAIN CONTENT ===================== -->
+  <main class="pt-16">
+
+    <!-- ========== HOME SECTION ========== -->
+    <section id="home" class="spa-section min-h-screen flex flex-col items-center justify-center relative overflow-hidden">
+
+      <!-- Decorative Background -->
+      <div class="hero-bg absolute inset-0 -z-10"></div>
+      <div class="absolute inset-0 -z-10 hero-pattern opacity-20"></div>
+
+      <!-- Floating orbs -->
+      <div class="orb orb-1 absolute -z-10 w-72 h-72 rounded-full blur-3xl"></div>
+      <div class="orb orb-2 absolute -z-10 w-96 h-96 rounded-full blur-3xl"></div>
+      <div class="orb orb-3 absolute -z-10 w-56 h-56 rounded-full blur-3xl"></div>
+
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-24">
+
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-100 text-emerald-800 text-xs font-semibold tracking-widest uppercase mb-8 border border-emerald-200 fade-in-up" style="animation-delay:0.1s">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          Shamsabad · Budgam · Kashmir
+        </div>
+
+        <!-- Arabic Calligraphy Display -->
+        <div class="arabic-hero-text font-urdu text-4xl sm:text-5xl md:text-6xl text-emerald-900 mb-4 leading-loose fade-in-up" dir="rtl" style="animation-delay:0.2s">
+          الم
+        </div>
+
+        <!-- Main Heading -->
+        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-slate-900 leading-tight mb-6 fade-in-up" style="animation-delay:0.3s">
+          Alif Lam Meem
+          <span class="hero-gradient-text block sm:inline"> Official</span>
+        </h1>
+
+        <!-- Sub Heading -->
+        <p class="text-lg sm:text-xl md:text-2xl text-slate-600 max-w-2xl mx-auto mb-4 font-light fade-in-up" style="animation-delay:0.4s">
+          A legacy of spiritual guidance, faith healing &amp; Quranic scholarship
+        </p>
+        <p class="text-base text-emerald-700 font-medium mb-12 fade-in-up" style="animation-delay:0.5s">
+          Rooted in centuries of tradition in Shamsabad, Budgam, Kashmir
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 fade-in-up" style="animation-delay:0.6s">
+          <a href="#history"
+             class="nav-link cta-primary w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl text-base font-semibold text-white shadow-xl shadow-emerald-200 hover:shadow-emerald-300 transition-all duration-300 hover:-translate-y-0.5"
+             data-section="history">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+            Explore History
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=com.aliflaammeem.app&pcampaignid=web_share"
+             target="_blank" rel="noopener noreferrer"
+             class="cta-secondary w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl text-base font-semibold text-emerald-800 border-2 border-emerald-200 bg-white hover:bg-emerald-50 hover:border-emerald-400 shadow-lg transition-all duration-300 hover:-translate-y-0.5">
+            <svg class="w-5 h-5 text-emerald-700" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76a2 2 0 01-.87-1.85V2.09A2 2 0 013.18.24l.12-.07 12.49 11.76v.14L3.3 23.83l-.12-.07zM20.06 14.59l-2.8-1.64L14.6 12l2.66-2.95 2.8-1.64a1.55 1.55 0 011.94.47 1.59 1.59 0 010 1.74l-2 1.17 2 1.17a1.59 1.59 0 010 1.74 1.55 1.55 0 01-1.94.89zM4.17 23.7L14.28 12 4.17.3A2 2 0 002 2.09v19.82a2 2 0 002.17 1.79zM13.51 11.23L4.17.3l9.34 4.82-3.2 3.56 3.2 2.55z"/></svg>
+            Get Android App
+          </a>
+        </div>
+
+        <!-- Stats strip -->
+        <div class="mt-20 grid grid-cols-3 gap-4 sm:gap-8 max-w-lg mx-auto fade-in-up" style="animation-delay:0.8s">
+          <div class="text-center">
+            <div class="text-3xl font-black text-emerald-800">30+</div>
+            <div class="text-xs text-slate-500 font-medium mt-1 uppercase tracking-wide">Years of Service</div>
+          </div>
+          <div class="text-center border-x border-emerald-200">
+            <div class="text-3xl font-black text-emerald-800">1K+</div>
+            <div class="text-xs text-slate-500 font-medium mt-1 uppercase tracking-wide">Followers</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-black text-emerald-800">∞</div>
+            <div class="text-xs text-slate-500 font-medium mt-1 uppercase tracking-wide">Spiritual Guidance</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-emerald-600 opacity-60 fade-in-up" style="animation-delay:1s">
+        <span class="text-xs font-medium tracking-widest uppercase">Scroll</span>
+        <div class="scroll-mouse w-5 h-8 rounded-full border-2 border-emerald-400 flex items-start justify-center pt-1">
+          <div class="scroll-wheel w-1 h-2 bg-emerald-500 rounded-full"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== HISTORY SECTION ========== -->
+    <section id="history" class="spa-section hidden min-h-screen py-24 bg-gradient-to-b from-slate-50 to-emerald-50">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Section Header -->
+        <div class="text-center mb-16 fade-in-up">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-100 text-emerald-700 text-xs font-semibold tracking-widest uppercase mb-6 border border-emerald-200">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Our Legacy
+          </div>
+          <h2 class="text-4xl sm:text-5xl font-black text-slate-900 mb-4">Our History</h2>
+          <div class="section-divider mx-auto"></div>
+          <p class="text-slate-500 text-lg mt-6 max-w-xl mx-auto">
+            A journey spanning generations — from the looms of Kashmir to the light of divine knowledge.
+          </p>
+        </div>
+
+        <!-- Timeline -->
+        <div class="relative">
+          <!-- Vertical line -->
+          <div class="hidden md:block absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-emerald-200 via-emerald-400 to-emerald-200"></div>
+
+          <!-- Timeline Item 1 -->
+          <div class="timeline-item relative flex flex-col md:flex-row gap-8 md:gap-0 mb-16 fade-in-up">
+            <div class="md:w-1/2 md:pr-12 md:text-right">
+              <div class="timeline-card p-6 rounded-2xl bg-white shadow-lg shadow-emerald-100/60 border border-emerald-100">
+                <div class="flex items-center gap-3 mb-4 md:flex-row-reverse">
+                  <div class="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-5 h-5 text-emerald-700" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                  </div>
+                  <h3 class="font-bold text-emerald-900 text-lg">آغاز — دستکاری کا دور</h3>
+                </div>
+                <div class="urdu-text font-urdu text-right leading-loose text-slate-700 text-base" dir="rtl">
+                  <p>
+                    بسم اللہ الرحمٰن الرحیم۔ ہماری تنظیم کی جڑیں کشمیر کی قدیم سرزمین شمس آباد، ضلع بڈگام میں پیوست ہیں۔ اس خطے کے لوگ صدیوں سے قالین بافی اور دستکاری کے پیشے سے وابستہ رہے ہیں۔ اس ہنر نے نہ صرف ان کا پیٹ پالا بلکہ ان کے ہاتھوں میں ایک خاص نظم و ضبط اور صبر و استقامت بھی پیدا کی۔ یہی صبر اور محنت آگے چل کر روحانی سفر کی بنیاد بنی۔
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Dot -->
+            <div class="hidden md:flex absolute left-1/2 top-6 -translate-x-1/2 w-5 h-5 rounded-full bg-emerald-500 border-4 border-white shadow-lg shadow-emerald-200 z-10"></div>
+            <div class="md:w-1/2 md:pl-12 flex md:items-center">
+              <div class="timeline-year text-emerald-300 font-black text-6xl opacity-40 select-none">I</div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div class="timeline-item relative flex flex-col md:flex-row gap-8 md:gap-0 mb-16 fade-in-up" style="animation-delay:0.15s">
+            <div class="md:w-1/2 md:pr-12 flex md:items-center md:justify-end">
+              <div class="timeline-year text-emerald-300 font-black text-6xl opacity-40 select-none">II</div>
+            </div>
+            <!-- Dot -->
+            <div class="hidden md:flex absolute left-1/2 top-6 -translate-x-1/2 w-5 h-5 rounded-full bg-emerald-600 border-4 border-white shadow-lg shadow-emerald-200 z-10"></div>
+            <div class="md:w-1/2 md:pl-12">
+              <div class="timeline-card p-6 rounded-2xl bg-white shadow-lg shadow-emerald-100/60 border border-emerald-100">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-10 h-10 rounded-xl bg-teal-100 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-5 h-5 text-teal-700" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                  </div>
+                  <h3 class="font-bold text-emerald-900 text-lg">روحانی علاج کی طرف سفر</h3>
+                </div>
+                <div class="urdu-text font-urdu text-right leading-loose text-slate-700 text-base" dir="rtl">
+                  <p>
+                    وقت کے ساتھ ساتھ اس خطے میں ایمان کی روشنی پھیلتی گئی اور اللہ کے کچھ خاص بندے ایسے سامنے آئے جنہوں نے دستکاری کے پیشے کو چھوڑ کر اپنی زندگی دین کی خدمت کے لیے وقف کر دی۔ انہوں نے قرآن کریم کی تعلیمات اور سنتِ نبوی ﷺ کی روشنی میں روحانی علاج کا سلسلہ شروع کیا۔ دُور دُور سے لوگ اپنی تکالیف، بیماریاں اور مصیبتیں لے کر آتے اور دعاؤں اور دم کے ذریعے شفاء پاتے۔ یہ سلسلہ اللہ کی رحمت سے بڑھتا گیا اور شہرت کی حدود پھیلتی چلی گئیں۔
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3 -->
+          <div class="timeline-item relative flex flex-col md:flex-row gap-8 md:gap-0 mb-16 fade-in-up" style="animation-delay:0.3s">
+            <div class="md:w-1/2 md:pr-12 md:text-right">
+              <div class="timeline-card p-6 rounded-2xl bg-white shadow-lg shadow-emerald-100/60 border border-emerald-100">
+                <div class="flex items-center gap-3 mb-4 md:flex-row-reverse">
+                  <div class="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-5 h-5 text-emerald-700" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                  </div>
+                  <h3 class="font-bold text-emerald-900 text-lg">مدرسے کا قیام — ۱۹۹۶ء</h3>
+                </div>
+                <div class="urdu-text font-urdu text-right leading-loose text-slate-700 text-base" dir="rtl">
+                  <p>
+                    سن ۱۹۹۶ء میں اللہ تعالیٰ کے فضل و کرم سے شمس آباد، بڈگام میں باقاعدہ ایک دینی مدرسے کا قیام عمل میں آیا جس کا نام "الف لام میم" رکھا گیا۔ یہ نام قرآنِ کریم کے مقطعات سے لیا گیا جو اللہ کی عظمت اور راز کی علامت ہیں۔ اس مدرسے میں بچوں کو قرآن حفظ کروایا جاتا، دینی تعلیم دی جاتی اور روحانی تربیت کا سلسلہ جاری رہتا۔ آج اس مدرسے کے فارغ التحصیل طلباء کشمیر کے مختلف علاقوں میں دین کی خدمت انجام دے رہے ہیں۔
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Dot -->
+            <div class="hidden md:flex absolute left-1/2 top-6 -translate-x-1/2 w-5 h-5 rounded-full bg-emerald-700 border-4 border-white shadow-lg shadow-emerald-200 z-10"></div>
+            <div class="md:w-1/2 md:pl-12 flex md:items-center">
+              <div class="timeline-year text-emerald-300 font-black text-6xl opacity-40 select-none">III</div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 4 -->
+          <div class="timeline-item relative flex flex-col md:flex-row gap-8 md:gap-0 fade-in-up" style="animation-delay:0.45s">
+            <div class="md:w-1/2 md:pr-12 flex md:items-center md:justify-end">
+              <div class="timeline-year text-emerald-300 font-black text-6xl opacity-40 select-none">IV</div>
+            </div>
+            <!-- Dot -->
+            <div class="hidden md:flex absolute left-1/2 top-6 -translate-x-1/2 w-5 h-5 rounded-full bg-teal-600 border-4 border-white shadow-lg shadow-teal-200 z-10"></div>
+            <div class="md:w-1/2 md:pl-12">
+              <div class="timeline-card p-6 rounded-2xl bg-gradient-to-br from-emerald-800 to-teal-900 shadow-xl shadow-emerald-900/30 border border-emerald-700">
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+                  </div>
+                  <h3 class="font-bold text-white text-lg">ڈیجیٹل دور — آج اور کل</h3>
+                </div>
+                <div class="urdu-text font-urdu text-right leading-loose text-emerald-100 text-base" dir="rtl">
+                  <p>
+                    جدید دور کے تقاضوں کو مدنظر رکھتے ہوئے "الف لام میم آفیشل" نے ڈیجیٹل دنیا میں بھی قدم رکھا۔ سوشل میڈیا کے ذریعے روحانی پیغامات، دعائیں اور تعلیمات لاکھوں لوگوں تک پہنچائی جا رہی ہیں۔ اب ایک خصوصی موبائل ایپلی کیشن بھی دستیاب ہے جس کے ذریعے آپ گھر بیٹھے روحانی رہنمائی حاصل کر سکتے ہیں۔ یہ سفر جاری ہے — اللہ کی رحمت اور رسولِ کریم ﷺ کی سنت کی روشنی میں۔
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- End Timeline -->
+      </div>
+    </section>
+
+    <!-- ========== MISSION SECTION ========== -->
+    <section id="mission" class="spa-section hidden min-h-screen py-24 bg-gradient-to-b from-emerald-50 to-slate-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Section Header -->
+        <div class="text-center mb-16 fade-in-up">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-100 text-teal-700 text-xs font-semibold tracking-widest uppercase mb-6 border border-teal-200">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Purpose &amp; Direction
+          </div>
+          <h2 class="text-4xl sm:text-5xl font-black text-slate-900 mb-4">Mission &amp; Vision</h2>
+          <div class="section-divider mx-auto"></div>
+          <p class="text-slate-500 text-lg mt-6 max-w-xl mx-auto">
+            Guided by faith, driven by purpose — our commitment to community and spiritual growth.
+          </p>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+
+          <!-- Mission Card -->
+          <div class="mission-card group p-8 rounded-3xl bg-white shadow-xl shadow-emerald-100/50 border border-emerald-100 hover:shadow-emerald-200/60 transition-all duration-300 hover:-translate-y-1 fade-in-up">
+            <div class="flex items-start gap-5 mb-6">
+              <div class="mission-icon w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/>
+                </svg>
+              </div>
+              <div>
+                <span class="text-xs font-semibold tracking-widest uppercase text-emerald-500 mb-1 block">Our Mission</span>
+                <h3 class="text-2xl font-bold text-slate-900">Our Mission</h3>
+              </div>
+            </div>
+
+            <div class="urdu-text font-urdu text-right leading-[2.8] text-slate-700 text-base mb-6" dir="rtl">
+              <p>
+                ہمارا مشن یہ ہے کہ ہم قرآن و سنت کی روشنی میں عوام الناس کی روحانی، اخلاقی اور دینی تربیت کریں۔ ہم چاہتے ہیں کہ ہر مسلمان اپنے دین سے آگاہ ہو، نماز، روزہ، زکوۃ اور دیگر فرائض کو سمجھے اور ان پر عمل کرے۔ ہم خاص طور پر نوجوان نسل کو گمراہی سے بچانے کے لیے کام کرتے ہیں اور انہیں اسلام کی حقیقی تعلیمات سے روشناس کراتے ہیں۔
+              </p>
+            </div>
+
+            <!-- Decorative tags -->
+            <div class="flex flex-wrap gap-2 justify-end" dir="rtl">
+              <span class="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-medium border border-emerald-200">قرآن کریم</span>
+              <span class="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-medium border border-emerald-200">سنتِ نبوی</span>
+              <span class="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-medium border border-emerald-200">تربیتِ اخلاق</span>
+            </div>
+          </div>
+
+          <!-- Vision Card -->
+          <div class="mission-card group p-8 rounded-3xl bg-white shadow-xl shadow-teal-100/50 border border-teal-100 hover:shadow-teal-200/60 transition-all duration-300 hover:-translate-y-1 fade-in-up" style="animation-delay:0.15s">
+            <div class="flex items-start gap-5 mb-6">
+              <div class="vision-icon w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+              </div>
+              <div>
+                <span class="text-xs font-semibold tracking-widest uppercase text-teal-500 mb-1 block">Our Vision</span>
+                <h3 class="text-2xl font-bold text-slate-900">Our Vision</h3>
+              </div>
+            </div>
+
+            <div class="urdu-text font-urdu text-right leading-[2.8] text-slate-700 text-base mb-6" dir="rtl">
+              <p>
+                ہمارا وژن یہ ہے کہ ایک ایسا معاشرہ تشکیل دیا جائے جہاں اسلامی اقدار کو فروغ حاصل ہو، جہالت اور توہم پرستی کا خاتمہ ہو، اور لوگ صحیح عقیدے کے مطابق زندگی گزاریں۔ ہم چاہتے ہیں کہ ہمارا روحانی پیغام ہر گھر تک پہنچے — چاہے وہ کشمیر کی وادی ہو یا دنیا کا کوئی بھی کونہ۔ ڈیجیٹل دور میں ہم ٹیکنالوجی کو خیر کے لیے استعمال کرتے ہوئے اللہ کی رحمت اور ہدایت کا پیغام پھیلانے کے لیے پرعزم ہیں۔
+              </p>
+            </div>
+
+            <div class="flex flex-wrap gap-2 justify-end" dir="rtl">
+              <span class="px-3 py-1 rounded-full bg-teal-50 text-teal-700 text-xs font-medium border border-teal-200">روحانی رہنمائی</span>
+              <span class="px-3 py-1 rounded-full bg-teal-50 text-teal-700 text-xs font-medium border border-teal-200">ڈیجیٹل دعوت</span>
+              <span class="px-3 py-1 rounded-full bg-teal-50 text-teal-700 text-xs font-medium border border-teal-200">اسلامی معاشرہ</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Values Strip -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 fade-in-up" style="animation-delay:0.3s">
+          <div class="value-chip text-center p-5 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-md hover:border-emerald-200 transition-all duration-200">
+            <div class="text-2xl mb-2">🕌</div>
+            <div class="text-sm font-semibold text-slate-700">Faith</div>
+            <div class="text-xs text-slate-400 mt-1">ایمان</div>
+          </div>
+          <div class="value-chip text-center p-5 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-md hover:border-emerald-200 transition-all duration-200">
+            <div class="text-2xl mb-2">📖</div>
+            <div class="text-sm font-semibold text-slate-700">Knowledge</div>
+            <div class="text-xs text-slate-400 mt-1">علم</div>
+          </div>
+          <div class="value-chip text-center p-5 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-md hover:border-emerald-200 transition-all duration-200">
+            <div class="text-2xl mb-2">🤲</div>
+            <div class="text-sm font-semibold text-slate-700">Service</div>
+            <div class="text-xs text-slate-400 mt-1">خدمت</div>
+          </div>
+          <div class="value-chip text-center p-5 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-md hover:border-emerald-200 transition-all duration-200">
+            <div class="text-2xl mb-2">☮️</div>
+            <div class="text-sm font-semibold text-slate-700">Peace</div>
+            <div class="text-xs text-slate-400 mt-1">امن</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========== APP SECTION ========== -->
+    <section id="app" class="spa-section hidden min-h-screen py-24 bg-gradient-to-b from-slate-50 to-emerald-50 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Section Header -->
+        <div class="text-center mb-16 fade-in-up">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-100 text-emerald-700 text-xs font-semibold tracking-widest uppercase mb-6 border border-emerald-200">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+            Android Exclusive
+          </div>
+          <h2 class="text-4xl sm:text-5xl font-black text-slate-900 mb-4">Get the App</h2>
+          <div class="section-divider mx-auto"></div>
+          <p class="text-slate-500 text-lg mt-6 max-w-xl mx-auto">
+            Carry spiritual guidance in your pocket. Download the official Alif Lam Meem app for Android.
+          </p>
+        </div>
+
+        <!-- App Content -->
+        <div class="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-20">
+
+          <!-- Phone Mockup (CSS-built) -->
+          <div class="phone-wrapper relative flex-shrink-0 fade-in-up" style="animation-delay:0.2s">
+            <!-- Outer glow -->
+            <div class="absolute inset-0 rounded-[3rem] bg-gradient-to-b from-emerald-400 to-teal-600 blur-2xl opacity-25 scale-90"></div>
+            <!-- Phone shell -->
+            <div class="phone-shell relative w-[260px] h-[520px] rounded-[3rem] bg-gradient-to-b from-slate-800 to-slate-900 shadow-2xl border-4 border-slate-700 overflow-hidden">
+              <!-- Top notch -->
+              <div class="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-7 bg-slate-900 rounded-b-2xl z-20 flex items-center justify-center gap-2">
+                <div class="w-1.5 h-1.5 rounded-full bg-slate-700"></div>
+                <div class="w-8 h-1.5 rounded-full bg-slate-700"></div>
+              </div>
+              <!-- Side buttons -->
+              <div class="absolute -right-1.5 top-24 w-1.5 h-8 bg-slate-600 rounded-r-sm"></div>
+              <div class="absolute -left-1.5 top-16 w-1.5 h-6 bg-slate-600 rounded-l-sm"></div>
+              <div class="absolute -left-1.5 top-24 w-1.5 h-6 bg-slate-600 rounded-l-sm"></div>
+              <!-- Screen -->
+              <div class="phone-screen absolute inset-2 rounded-[2.4rem] overflow-hidden bg-gradient-to-b from-emerald-900 via-emerald-800 to-teal-900 pt-10">
+                <!-- Status bar -->
+                <div class="flex items-center justify-between px-5 py-2">
+                  <span class="text-white/80 text-xs font-medium">9:41</span>
+                  <div class="flex items-center gap-1">
+                    <div class="flex gap-0.5 items-end h-3">
+                      <div class="w-0.5 h-1 bg-white/80 rounded-sm"></div>
+                      <div class="w-0.5 h-1.5 bg-white/80 rounded-sm"></div>
+                      <div class="w-0.5 h-2 bg-white/80 rounded-sm"></div>
+                      <div class="w-0.5 h-3 bg-white/80 rounded-sm"></div>
+                    </div>
+                    <svg class="w-3 h-3 text-white/80 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M1.5 8.5C5.186 4.813 10.093 2.5 12 2.5c1.907 0 6.814 2.313 10.5 6L12 19 1.5 8.5z"/></svg>
+                    <div class="ml-1 w-5 h-2.5 border border-white/60 rounded-sm flex items-center px-0.5">
+                      <div class="h-full w-3/4 bg-white/80 rounded-xs"></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- App UI -->
+                <div class="flex flex-col items-center pt-4 px-4">
+                  <div class="w-14 h-14 rounded-2xl bg-white/10 border border-white/20 flex items-center justify-center mb-3 backdrop-blur-sm">
+                    <span class="text-white font-bold text-lg font-urdu">الم</span>
+                  </div>
+                  <p class="text-white font-bold text-sm text-center mb-1">Alif Lam Meem</p>
+                  <p class="text-emerald-300 text-xs text-center mb-5">Official Spiritual App</p>
+                  <!-- Fake cards -->
+                  <div class="w-full space-y-2">
+                    <div class="w-full h-10 bg-white/10 rounded-xl border border-white/10 flex items-center px-3 gap-2">
+                      <div class="w-4 h-4 rounded-md bg-emerald-400/50"></div>
+                      <div class="h-2 flex-1 bg-white/20 rounded-full"></div>
+                    </div>
+                    <div class="w-full h-10 bg-white/10 rounded-xl border border-white/10 flex items-center px-3 gap-2">
+                      <div class="w-4 h-4 rounded-md bg-teal-400/50"></div>
+                      <div class="h-2 w-3/4 bg-white/20 rounded-full"></div>
+                    </div>
+                    <div class="w-full h-10 bg-white/10 rounded-xl border border-white/10 flex items-center px-3 gap-2">
+                      <div class="w-4 h-4 rounded-md bg-emerald-300/50"></div>
+                      <div class="h-2 w-1/2 bg-white/20 rounded-full"></div>
+                    </div>
+                    <div class="w-full h-16 bg-emerald-500/20 rounded-xl border border-emerald-400/30 flex items-center justify-center mt-3">
+                      <span class="text-emerald-300 text-xs font-urdu font-medium" dir="rtl">روحانی رہنمائی</span>
+                    </div>
+                  </div>
+                  <!-- Bottom Nav -->
+                  <div class="absolute bottom-0 left-0 right-0 h-14 bg-black/30 backdrop-blur-sm flex items-center justify-around px-4 border-t border-white/10">
+                    <div class="flex flex-col items-center gap-0.5">
+                      <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+                      <div class="w-1 h-1 rounded-full bg-emerald-400"></div>
+                    </div>
+                    <div class="flex flex-col items-center gap-0.5">
+                      <svg class="w-4 h-4 text-white/40" fill="currentColor" viewBox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                      <div class="h-0.5 w-4 bg-transparent"></div>
+                    </div>
+                    <div class="flex flex-col items-center gap-0.5">
+                      <svg class="w-4 h-4 text-white/40" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+                      <div class="h-0.5 w-4 bg-transparent"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Home indicator -->
+              <div class="absolute bottom-2 left-1/2 -translate-x-1/2 w-24 h-1 bg-white/30 rounded-full"></div>
+            </div>
+          </div>
+
+          <!-- App Info -->
+          <div class="flex-1 max-w-md lg:max-w-lg fade-in-up" style="animation-delay:0.3s">
+            <h3 class="text-3xl sm:text-4xl font-black text-slate-900 mb-4 leading-tight">
+              Spiritual Guidance,<br/>
+              <span class="hero-gradient-text">Now in Your Hand</span>
+            </h3>
+            <p class="text-slate-600 text-lg mb-8 leading-relaxed">
+              The official Alif Lam Meem Android app brings the organization's spiritual resources, guidance, and teachings directly to your Android device — for free.
+            </p>
+
+            <!-- Feature list -->
+            <ul class="space-y-4 mb-10">
+              <li class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5 text-emerald-700" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                </div>
+                <div>
+                  <span class="font-semibold text-slate-800">Spiritual Content &amp; Teachings</span>
+                  <p class="text-slate-500 text-sm mt-0.5">Access duas, spiritual guidance, and educational content anytime.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5 text-emerald-700" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                </div>
+                <div>
+                  <span class="font-semibold text-slate-800">Updates &amp; Announcements</span>
+                  <p class="text-slate-500 text-sm mt-0.5">Stay connected with the latest news from the organization.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5 text-emerald-700" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                </div>
+                <div>
+                  <span class="font-semibold text-slate-800">Free to Download</span>
+                  <p class="text-slate-500 text-sm mt-0.5">Completely free on Google Play — no subscription required.</p>
+                </div>
+              </li>
+            </ul>
+
+            <!-- Google Play Button -->
+            <a href="https://play.google.com/store/apps/details?id=com.aliflaammeem.app&pcampaignid=web_share"
+               target="_blank" rel="noopener noreferrer"
+               class="google-play-btn inline-flex items-center gap-4 px-6 py-4 rounded-2xl bg-slate-900 text-white shadow-xl hover:bg-slate-800 hover:shadow-2xl transition-all duration-300 hover:-translate-y-0.5 group w-full sm:w-auto">
+              <svg class="w-8 h-8 flex-shrink-0 group-hover:scale-110 transition-transform duration-200" viewBox="0 0 24 24" fill="none">
+                <path d="M3.18 23.76a2 2 0 01-.87-1.85V2.09A2 2 0 013.18.24l.12-.07 12.49 11.76v.14L3.3 23.83l-.12-.07z" fill="#EA4335"/>
+                <path d="M20.06 14.59l-2.8-1.64-2.66-1.58 2.66-2.95 2.8-1.64a1.55 1.55 0 011.94.47 1.59 1.59 0 010 1.74l-2 1.17 2 1.17a1.59 1.59 0 010 1.74 1.55 1.55 0 01-1.94.52z" fill="#FBBC05"/>
+                <path d="M4.17 23.7L14.28 12 4.17.3A2 2 0 002 2.09v19.82a2 2 0 002.17 1.79z" fill="#4285F4"/>
+                <path d="M13.51 11.23L4.17.3l9.34 4.82-3.2 3.56 3.2 2.55z" fill="#34A853"/>
+              </svg>
+              <div class="text-left">
+                <div class="text-xs text-white/60 leading-none mb-1">GET IT ON</div>
+                <div class="text-lg font-bold leading-none">Google Play</div>
+              </div>
+            </a>
+
+            <!-- Platform note -->
+            <p class="mt-4 text-xs text-slate-400 flex items-center gap-2">
+              <svg class="w-4 h-4 text-slate-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Available for Android devices only. Requires Android 5.0+
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="bg-gradient-to-br from-slate-900 via-emerald-950 to-slate-900 text-white">
+    <!-- Top wave -->
+    <div class="footer-wave overflow-hidden leading-none">
+      <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0 60L60 50C120 40 240 20 360 16.7C480 13.3 600 26.7 720 30C840 33.3 960 26.7 1080 23.3C1200 20 1320 20 1380 20L1440 20V0H1380C1320 0 1200 0 1080 0C960 0 840 0 720 0C600 0 480 0 360 0C240 0 120 0 60 0H0V60Z" fill="#f8fafc"/>
+      </svg>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+
+        <!-- Brand -->
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="logo-emblem w-12 h-12 rounded-xl flex items-center justify-center shadow-lg">
+              <span class="text-white font-bold">الم</span>
+            </div>
+            <div>
+              <span class="font-bold text-lg block">ALIF LAM MEEM</span>
+              <span class="text-emerald-400 text-xs tracking-widest uppercase">Official</span>
+            </div>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4 max-w-sm">
+            A spiritual organization dedicated to faith, knowledge, and community service — rooted in the heart of Kashmir.
+          </p>
+          <!-- Address -->
+          <div class="flex items-start gap-2 text-slate-400 text-sm">
+            <svg class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <span>Shamsabad, Budgam,<br/>Jammu &amp; Kashmir, India</span>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-sm font-semibold uppercase tracking-widest text-emerald-400 mb-5">Navigate</h4>
+          <ul class="space-y-3">
+            <li><a href="#home"    class="nav-link text-slate-400 hover:text-white text-sm transition-colors duration-200 flex items-center gap-2" data-section="home"><span class="w-1 h-1 rounded-full bg-emerald-500"></span> Home</a></li>
+            <li><a href="#history" class="nav-link text-slate-400 hover:text-white text-sm transition-colors duration-200 flex items-center gap-2" data-section="history"><span class="w-1 h-1 rounded-full bg-emerald-500"></span> History</a></li>
+            <li><a href="#mission" class="nav-link text-slate-400 hover:text-white text-sm transition-colors duration-200 flex items-center gap-2" data-section="mission"><span class="w-1 h-1 rounded-full bg-emerald-500"></span> Mission &amp; Vision</a></li>
+            <li><a href="#app"     class="nav-link text-slate-400 hover:text-white text-sm transition-colors duration-200 flex items-center gap-2" data-section="app"><span class="w-1 h-1 rounded-full bg-emerald-500"></span> Get App</a></li>
+          </ul>
+        </div>
+
+        <!-- Connect -->
+        <div>
+          <h4 class="text-sm font-semibold uppercase tracking-widest text-emerald-400 mb-5">Connect</h4>
+          <ul class="space-y-3 mb-6">
+            <li>
+              <a href="https://youtube.com/@alifflaammeem?si=udmiZNeTarXNmfBA" target="_blank" rel="noopener noreferrer"
+                 class="flex items-center gap-3 text-slate-400 hover:text-white text-sm transition-colors duration-200 group">
+                <div class="w-8 h-8 rounded-lg bg-red-500/10 group-hover:bg-red-500/20 flex items-center justify-center transition-colors duration-200">
+                  <svg class="w-4 h-4 text-red-400" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                </div>
+                YouTube Channel
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/AllifLaamMeem" target="_blank" rel="noopener noreferrer"
+                 class="flex items-center gap-3 text-slate-400 hover:text-white text-sm transition-colors duration-200 group">
+                <div class="w-8 h-8 rounded-lg bg-blue-500/10 group-hover:bg-blue-500/20 flex items-center justify-center transition-colors duration-200">
+                  <svg class="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                </div>
+                Facebook Page
+              </a>
+            </li>
+            <li>
+              <a href="https://play.google.com/store/apps/details?id=com.aliflaammeem.app&pcampaignid=web_share" target="_blank" rel="noopener noreferrer"
+                 class="flex items-center gap-3 text-slate-400 hover:text-white text-sm transition-colors duration-200 group">
+                <div class="w-8 h-8 rounded-lg bg-emerald-500/10 group-hover:bg-emerald-500/20 flex items-center justify-center transition-colors duration-200">
+                  <svg class="w-4 h-4 text-emerald-400" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76a2 2 0 01-.87-1.85V2.09A2 2 0 013.18.24l.12-.07 12.49 11.76v.14L3.3 23.83l-.12-.07z"/></svg>
+                </div>
+                Android App
+              </a>
+            </li>
+          </ul>
+          <div class="space-y-2">
+            <a href="mailto:aliflaammeem1996@gmail.com" class="flex items-center gap-2 text-slate-400 hover:text-white text-xs transition-colors duration-200">
+              <svg class="w-3.5 h-3.5 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              aliflaammeem1996@gmail.com
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <p class="text-slate-500 text-xs text-center sm:text-left">
+          &copy; 2024 Alif Lam Meem Official. All rights reserved.
+        </p>
+        <p class="text-slate-500 text-xs text-center">
+          Designed &amp; Developed by
+          <a href="https://elegant-maamoul-35e6a2.netlify.app/" target="_blank" rel="noopener noreferrer"
+             class="text-emerald-400 hover:text-emerald-300 font-medium transition-colors duration-200 ml-1">
+            Moomin Sedeeq
+          </a>
+          &nbsp;·&nbsp;
+          <a href="mailto:moominsedeeq@gmail.com" class="text-slate-400 hover:text-slate-300 transition-colors duration-200">
+            moominsedeeq@gmail.com
+          </a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- App JS -->
+  <script src="app.js"></script>
+</body>
+</html>
